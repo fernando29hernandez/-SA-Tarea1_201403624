@@ -100,3 +100,7 @@ switch ($func) {
 		});
 ```
 
+## RUN APP
+
+Para correr la aplicacion solo es necesario descargar el repositorio y ubicarlo en la capeta /www de apache y abrir el navegador de preferencia en https://localhost:80/Tarea1/Index.html
+
