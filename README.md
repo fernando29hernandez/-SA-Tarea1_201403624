@@ -12,7 +12,7 @@ Lenguajes Utilizados:
 
 # Obtener el Token de Acceso
 
-Se obtiene por medio del correo registrado en el dtt y el # de carnet se puede un token de acceso haciendo una llamada utilizando curl del lenguaje php para utilizar un servicio/una rest api la cual nos retorna dicho token.
+Se obtiene por medio del correo registrado en el dtt y el # de carnet, un token de acceso haciendo una llamada utilizando curl del lenguaje php para utilizar un servicio/una rest api la cual nos retorna dicho token.
 ```sh
 $curl = curl_init("https://api.softwareavanzado.world/index.php?option=token&api=oauth2");// URL DONDE SE ENCUENTRA EL SERVICIO
     curl_setopt($curl, CURLOPT_POST, true);// indico que es metodo post
@@ -60,8 +60,9 @@ $curl = curl_init("https://api.softwareavanzado.world/index.php?option=token&api
     curl_close($ch_post);// cerrando conexion
 ```
 
-### SELECTOR DE FUNCION
+## SELECTOR DE FUNCION
 
+Para simular en php lo que vendria siendo un menu se puede utilizar un parametro del formulario y almacenar que funcion es la que estamos llamando desde el navegador 
 ```sh
 // POR MEDIO DEL PARAMETRO 'FUNC' EN EL FORMULARIO SE INDICA CUAL FUNCION EJECUTAR 
 $func = $_POST['func']; //CAPTURO LA FUNCION CON A LA CUAL TENGO QUE LLAMAR
@@ -77,8 +78,8 @@ switch ($func) {
         break;
 }
 ```
-# USO DE AJAX
-```sh
+## USO DE AJAX
+```
 // CREACION DE VARIABLE OBJETO PARA ENVIAR COMO FORMULARIO
 		var param = {
 			func: 'insertar',
