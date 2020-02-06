@@ -83,8 +83,10 @@ function insertar(){
 }
 
 
-
-$func = $_POST['func']; //remember to escape it
+/**
+ * SELECTOR DE FUNCION
+ */
+$func = $_POST['func']; //CAPTURO LA FUNCION CON A LA CUAL TENGO QUE LLAMAR
 switch ($func) {
     case 'listar':
         listar();
@@ -93,7 +95,7 @@ switch ($func) {
         insertar();
         break;    
     default:
-        //function not found, error or something
+        //function not found, ESTO ES UN ERROR
         break;
 }
 ?>

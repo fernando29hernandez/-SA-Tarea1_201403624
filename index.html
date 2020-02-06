@@ -8,16 +8,23 @@
 </head>
 
 <body>
+	<!-- FORMULARIO PARA EL INGRESO DEL CUALQUIER CORREO Y CLAVE PARA OBTENER EL TOKEN -->
 	<label>Fernando Antonio Hernandez Gramajo - 201403624</label><br>
 	<label>correo</label><br>
 	<input type="text" name="email" id="email"></input><br>
 	<label>contraseña</label><br>
 	<input type="text" name="password" id="password"></input> <br>
+	<!-- #BOTONES DE LA APLICACION -->
 	<input type="submit" name="button-envio" value="Listar" onclick="listar();"></input>
 	<input type="submit" name="button-envio" value="Insertar" onclick="insertar();"></input>
 </body>
 
 <script>
+	/*
+	* 
+	* FUNCIONES DE JAVASCRIPT PARA EL USO DE PHP POR MEDIO DE AJAX
+	*
+	*/
 	function listar() {
 		var param = {
 			func: 'listar',
@@ -25,10 +32,11 @@
 			password: document.getElementById("password").value
 		};
 		console.log(param);
+		//IMPRIMO EL JSON SOLO PARA VERIFICAR LO QUE SE ESTA ENVIANDO POR AJAX
 		$.ajax({
 			data:param,
 			type: 'POST',
-			url: 'funciones.php', //this should be url to your PHP file
+			url: 'funciones.php', //RUTA DEL ARCHIVO PHP CON FUNCIONES
 			dataType: 'html',
 			success: function (data) {
 				document.write(data);
@@ -46,11 +54,11 @@
 		$(document).ready(function () {
 			$.ajax({
 				data: param,
-				url: "funciones.php",
+				url: "funciones.php",//RUTA DEL ARCHIVO PHP CON FUNCIONES
 				method: "post",
 				success: function (data) {
 					document.write(data);
-					/*La variable data contiene la respuesta de tu script PHP*/
+					/*La variable data contiene la respuesta del script PHP*/
 				}
 			});
 		});
