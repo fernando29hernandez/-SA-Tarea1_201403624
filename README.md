@@ -79,7 +79,7 @@ switch ($func) {
 }
 ```
 ## USO DE AJAX
-```
+```sh
 // CREACION DE VARIABLE OBJETO PARA ENVIAR COMO FORMULARIO
 		var param = {
 			func: 'insertar',
