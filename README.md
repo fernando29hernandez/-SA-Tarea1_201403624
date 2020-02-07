@@ -1,4 +1,4 @@
-# Tarea 1-201403624 - Sofware Avanzado - Primer Semestre 2020 
+# Tarea 1-201403624 - Software Avanzado - Primer Semestre 2020 
 
 Lenguajes Utilizados:
   - Javascript
